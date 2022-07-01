@@ -11,13 +11,13 @@ let generateFile = require('../translationModule/generateXmlFromDB').generateFil
 
 
 router.get('/', (req, res) => {
-    console.log("sample output")
+//console.log("sample output")
     res.send("ok done!!!");
 
 })
 
 
-router.post('/',(res))
+//router.post('/',(res))
 /*
 
 router.post('/', async (req, res) => {
