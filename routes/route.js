@@ -21,6 +21,11 @@ router.get('/sampleURL', (req, res) => {
 
 })
 
+router.post('/', (req, res) => {
+    console.log('post request')
+    res.send('post request')
+})
+
 //router.post('/',(res))
 /*
 
