@@ -4,7 +4,7 @@ const app = express();
 const generateUUID=require('./translationModule/uuidGenerator')
 const getTranslation=require('./translationModule/translate')
 const generateFile=require('./translationModule/generateXmlFromDB').generateFile
-
+const routes=require('./routes/route')
 
 
 
@@ -12,7 +12,12 @@ const generateFile=require('./translationModule/generateXmlFromDB').generateFile
 
 const port = process.env.PORT || 8080;
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.use(express.urlencoded({ extended: false }))
+
+app.use(express.json());
+
+app.use( routes)
+/*app.get('/', (req, res) => res.send('Hello World!'));
 
 app.post('/', async (req, res) => {
     try {
@@ -35,6 +40,6 @@ app.post('/getFile', async (req, res) => {
     } catch (error) {
         res.send(error)
     }
-})
+})*/
 app.listen(port);
 console.log(`App running on http://localhost:${port}`);
