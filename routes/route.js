@@ -11,17 +11,17 @@ let generateFile = require('../translationModule/generateXmlFromDB').generateFil
 
 
 router.get('/', (req, res) => {
-    res.status(200).send("ok done!!!");
+    res.send("ok done!!!");
 
 })/*
 router.post('/', async (req, res) => {
     try {
         let uuid = await generateUUID();
-        res.status(200).send({
+        res.send({
             "uuid": uuid
         })
         await getTranslation({ "body": req.body, "uuid": uuid })
-        res.status(200).send("ok done!!!");
+        res.send("ok done!!!");
     } catch (error) {
         console.log(error)
         res.send(null)
@@ -30,14 +30,13 @@ router.post('/', async (req, res) => {
 router.post('/getFile', async (req, res) => {
     try {
         await generateFile(req.body.uuid)
-        res.status(200).send("ok done!!!");
+        res.send("ok done!!!");
 
     } catch (error) {
         res.send(error)
     }
-})*/
-
-
+})
+*/
 
 
 module.exports = router
