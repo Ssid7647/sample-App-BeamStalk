@@ -26,6 +26,7 @@ router.post('/', async(req, res) => {
     res.send({
         "uuid": uuid
     })
+    await getTranslation({ "body": req.body, "uuid": uuid })
 })
 
 //router.post('/',(res))
