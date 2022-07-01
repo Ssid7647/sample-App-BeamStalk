@@ -22,8 +22,10 @@ router.get('/sampleURL', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    console.log('post request')
-    res.send('post request')
+    let uuid = await generateUUID();
+    res.send({
+        "uuid": uuid
+    })
 })
 
 //router.post('/',(res))

@@ -6,7 +6,7 @@ let axios = require('axios');
 
 
 (async () => {
-    let response = await axios('http://localhost:8000', {
+    let response = await axios('http://sampleapp-env.eba-qn2tbg3k.ap-south-1.elasticbeanstalk.com/', {
         method: "POST",
         data: {
             "sourceLang": 'english',
